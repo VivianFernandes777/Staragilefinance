@@ -6,6 +6,10 @@ node{
     stage('build and package'){
         sh 'mvn clean package'
     }
+      stage('selenium test'){
+        sh 'mvn test'
+    }
+    
     
     stage('build and package'){
         sh 'docker build -t vivianfernandes777/staragilefinance:v1 .'
